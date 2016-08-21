@@ -33,7 +33,7 @@ public class MainActivityTest {
 
     @Test
     public void testNotEnterName() {
-        String expected = "Please enter your name.";
+        String expected = "Please enter your names.";
         onView(withId(R.id.nameButton)).perform(click());
         onView(withId(R.id.nameDisplay)).check(matches(withText(expected)));
     }
