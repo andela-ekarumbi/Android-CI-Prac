@@ -20,5 +20,9 @@ test:
     override:
         - adb logcat -c
         - adb shell input keyevent 82
+        - wget http://imgur.com/tools/imgurbash.sh
+        - chmod a+x imgurbash.sh
+        - adb shell screencap -p | sed 's/\r$//' > bootscreen.png
+        - ./imgurbash.sh bootscreen.png
         - ./gradlew connectedAndroidTest -i
         - ./gradlew assembleDebug
