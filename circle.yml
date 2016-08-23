@@ -19,5 +19,5 @@ test:
     - circle-android wait-for-boot
     override:
         - ./gradlew connectedAndroidTest
-        - (./gradlew assemble):
-            timeout: 360
+        - ./gradlew assembleDebug
+        - cp -r Android-CI-Prac/build/outputs $CIRCLE_ARTIFACTS
