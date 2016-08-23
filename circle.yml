@@ -13,5 +13,6 @@ dependencies:
 
 test:
     override:
-        - (./gradlew test):
+        - ./gradlew connectedAndroidTest
+        - (./gradlew assemble):
             timeout: 360
