@@ -19,5 +19,6 @@ test:
     - circle-android wait-for-boot
     - adb shell input keyevent 82
     override:
-        - ./gradlew connectedAndroidTest
+        - adb logcat -c
+        - ./gradlew connectedAndroidTest -i
         - ./gradlew assembleDebug
