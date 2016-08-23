@@ -1,6 +1,6 @@
 general:
     artifacts:
-        - /home/ubuntu/ContinuousIntegration/app/build/outputs/apk/
+        - /home/ubuntu/Android-CI-Prac/app/build/outputs/apk/
 
 machine:
     environment:
