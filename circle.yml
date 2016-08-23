@@ -20,4 +20,3 @@ test:
     override:
         - ./gradlew connectedAndroidTest
         - ./gradlew assembleDebug
-        - cp -r Android-CI-Prac/build/outputs $CIRCLE_ARTIFACTS
