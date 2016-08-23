@@ -25,7 +25,7 @@ public class MainActivityTest {
 
     @Test
     public void testEnterName() {
-        String expected = "Hello, Estons";
+        String expected = "Hello, Eston";
         onView(withId(R.id.enterName)).perform(typeText("Eston"));
         onView(withId(R.id.nameButton)).perform(click());
         onView(withId(R.id.nameDisplay)).check(matches(withText(expected)));
