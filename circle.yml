@@ -13,10 +13,11 @@ dependencies:
 
 test:
     pre:
-    - emulator -avd circleci-android22:
+    - emulator -avd circleci-android22 -wipe-data:
         background: true
         parallel: true
     - circle-android wait-for-boot
+    - fb-adb shell input keyevent 82
     override:
         - ./gradlew connectedAndroidTest
         - ./gradlew assembleDebug
